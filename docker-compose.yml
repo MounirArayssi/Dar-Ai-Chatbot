@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "5512:5512"
+    environment:
+      - PORT=5512
+    volumes:
+      - .:/app
+    restart: unless-stopped
